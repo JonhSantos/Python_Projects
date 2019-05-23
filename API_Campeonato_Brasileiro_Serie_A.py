@@ -1,10 +1,15 @@
 # API - Campeonato Brasileiro Série A
+import argparse
 import requests
 from bs4 import BeautifulSoup
 
+parser = argparse.ArgumentParser(description='Exibe à classificação do Campeonato Brasileiro.')
+parser.add_argument('--serie', help='Informe à série a ser exibida a, b, c ou d', default='a')
+args = parser.parse_args()
+
 clubs = []
 
-request = requests.get('https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-a')
+request = requests.get('https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-'+args.serie.lower())
 soup = BeautifulSoup(request.text, 'html.parser')
 info = soup.find_all('tr', class_='expand-trigger')
 
@@ -12,7 +17,7 @@ for td in info:
     clubs.append(td.get_text()[3:70].split('\n'))
 
 print(f'\n{"_" * 103}')
-print(f'\033[32m\n{" Campeonato Brasileiro Série A ":^102}\033[m')
+print(f'\033[32m\n{" Campeonato Brasileiro Série "+args.serie.upper():^102}\033[m')
 print(f'{"_" * 103} \n')
 print(f'\033[33mClassificação                                    P    J    V    E    D   GP   GC    SG    CA   CV    %\033[m\n')
 
