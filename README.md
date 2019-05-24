@@ -1,7 +1,11 @@
-# Classificação do Brasileião [forked from JonhSantos/Python_Projects]
+# Classificação do Brasileirão [Forked from JonhSantos/Python_Projects]
 
-Instalação `$ chmod +x install.sh && ./install.sh`
+Instalação 
+```
+$ chmod +x install.sh && ./install.sh
+```
 
-<br>
-
-Executar Programa `$ brasileirao [--serie <a|b|c|d>]`
+Executar Programa
+```
+$ brasileirao [--serie <a|b|c|d>]
+```
