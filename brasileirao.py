@@ -1,3 +1,4 @@
+#!/usr/bin/python3.6
 # API - Campeonato Brasileiro Série A
 import argparse
 import requests
