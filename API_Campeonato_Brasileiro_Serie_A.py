@@ -20,15 +20,15 @@ for club in clubs:
     if club in clubs[0:4]:
         print(f'{club[0]:>3}  {club[1]:>2}  \033[36m{club[3]:<30}\033[m\t\t{club[5]:>2}   {club[6]:>2}   {club[7]:>2}'
               f'   {club[8]:>2}   {club[9]:>2}   {club[10]:>2}   {club[11]:>2}   {club[12]:>3}   {club[13]:>3}'
-              f'   {club[14]:>2}   {club[15]:>2}')
+              f'   {club[14]:>2}   {club[15]:>3}')
     elif club in clubs[4:16]:
         print(f'{club[0]:>3}  {club[1]:>2}  {club[3]:<30}\t\t{club[5]:>2}   {club[6]:>2}   {club[7]:>2}'
               f'   {club[8]:>2}   {club[9]:>2}   {club[10]:>2}   {club[11]:>2}   {club[12]:>3}   {club[13]:>3}'
-              f'   {club[14]:>2}   {club[15]:>2}')
+              f'   {club[14]:>2}   {club[15]:>3}')
     else:
         print(f'{club[0]:>3}  {club[1]:>2}  \033[31m{club[3]:<30}\033[m\t\t{club[5]:>2}   {club[6]:>2}   {club[7]:>2}'
               f'   {club[8]:>2}   {club[9]:>2}   {club[10]:>2}   {club[11]:>2}   {club[12]:>3}   {club[13]:>3}'
-              f'   {club[14]:>2}   {club[15]:>2}')
+              f'   {club[14]:>2}   {club[15]:>3}')
 
 print(f'\n{"_" * 103} \n')
 print('{:^103}'.format(" B\'H\'A - Bendito seja o Pai que está nos céus! "))
